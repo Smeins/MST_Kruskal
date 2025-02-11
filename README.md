@@ -1,6 +1,6 @@
 #  Minimum Spanning Tree (MST) - Kruskal & Prim Algorithmen
 
-Dieses Repository enthält eine Implementierung und Visualisierung des **Minimum Spanning Tree (MST)** mit **Kruskal’s und Prim’s Algorithmus**. Zusätzlich wird der MST sowohl in **2D als auch in 3D** visualisiert. 
+Dieses Repository enthält eine Implementierung und Visualisierung des **Minimum Spanning Tree (MST)** mit dem **Kruskal Algorithmus**. Außerdem wird der **Prim’s Algorithmus** angeschnitten, jedoch nicht visualisiert. Zusätzlich wird der MST sowohl in **2D als auch in 3D** visualisiert. 
 
 ---
 
