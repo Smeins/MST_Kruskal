@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-T
+import numpy as np
+
 def kruskal(n, edges):
     edges.sort(key=lambda x: x[2])  
     parent = list(range(n))
@@ -20,27 +21,28 @@ def kruskal(n, edges):
             break
     return mst
 
-edges = [(0, 1, 4), (0, 2, 4), (1, 2, 2), (1, 3, 6), (2, 3, 8), (3, 4, 9)]
-n = 5
+n = 20
+np.random.seed(42)  # Seed für reproduzierbare Ergebnisse
+positions = {i: np.random.rand(2) for i in range(n)}  
+
+edges = [(i, j, np.linalg.norm(positions[i] - positions[j])) for i in range(n) for j in range(i + 1, n)]
 mst_edges = kruskal(n, edges)
 
 G = nx.Graph()
 G.add_weighted_edges_from(edges)
 
 plt.figure(figsize=(10, 5))
-pos = nx.spring_layout(G)  
-nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=2000, font_size=15)
-edge_labels = {(u, v): w for u, v, w in edges}
-nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=12)
-plt.title("Originalgraph")
-plt.show()
+plt.title("Minimum Spanning Tree (MST) - 2D Visualisierung")
 
-MST_G = nx.Graph()
-MST_G.add_weighted_edges_from(mst_edges)
+for u, v, w in edges:
+    x_vals, y_vals = zip(positions[u], positions[v])
+    plt.plot(x_vals, y_vals, 'gray', alpha=0.2) 
 
-plt.figure(figsize=(10, 5))
-nx.draw(MST_G, pos, with_labels=True, node_color='lightgreen', edge_color='red', node_size=2000, font_size=15)
-mst_edge_labels = {(u, v): w for u, v, w in mst_edges}
-nx.draw_networkx_edge_labels(MST_G, pos, edge_labels=mst_edge_labels, font_size=12)
-plt.title("Minimum Spanning Tree (MST) mit Kruskal")
+for u, v, w in mst_edges:
+    x_vals, y_vals = zip(positions[u], positions[v])
+    plt.plot(x_vals, y_vals, 'red', linewidth=2) 
+for node, pos in positions.items():
+    plt.scatter(*pos, color='blue', s=50)
+    plt.text(*pos, str(node), fontsize=8, color='black', ha='right')
+
 plt.show()
