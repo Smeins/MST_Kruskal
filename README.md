@@ -75,7 +75,7 @@ pip install networkx matplotlib numpy
 
 ---
 
-##  Kruskal vs. Prim – Welcher ist besser?
+##  Kruskal vs. Prim
 | **Eigenschaft**  | **Kruskal** | **Prim** |
 |------------------|------------|---------|
 | **Ansatz**      | Greedy (Kanten-Auswahl) | Greedy (Knoten-Wachstum) |
@@ -92,5 +92,14 @@ pip install networkx matplotlib numpy
 | Machine Learning (Clusteranalyse) | Kruskal |
 
 ---
-
+## Anwendungsbilder 3D
+### Nutzung der 3D-Modellierung mit einem n = 20
+![MST_3D_n20](https://github.com/user-attachments/assets/4da10fc9-0a36-47e6-b4dc-f5e03e64ef1c)
+### Nutzung der 3D-Modellierung mit einem n = 5
+![MST_3D_n5](https://github.com/user-attachments/assets/f0f395b9-985d-4d46-acbf-d10f36854638)
+## Anwendungsbilder 2D
+### Nutzung der 2D-Modellierung mit einem n = 20
+![MST_2D_n20](https://github.com/user-attachments/assets/b3513ac5-59aa-48e8-84d4-9f43ea5075c9)
+### Nutzung der 2D-Modellierung mit einem n = 5
+![MST_2D_n5](https://github.com/user-attachments/assets/3247dc5b-c3f6-465e-bfb6-471fb22af591)
 
