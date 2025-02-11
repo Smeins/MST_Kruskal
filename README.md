@@ -1,10 +1,10 @@
-# 📌 Minimum Spanning Tree (MST) - Kruskal & Prim Algorithmen
+#  Minimum Spanning Tree (MST) - Kruskal & Prim Algorithmen
 
-Dieses Repository enthält eine Implementierung und Visualisierung des **Minimum Spanning Tree (MST)** mit **Kruskal’s und Prim’s Algorithmus**. Zusätzlich wird der MST sowohl in **2D als auch in 3D** visualisiert. 🎯
+Dieses Repository enthält eine Implementierung und Visualisierung des **Minimum Spanning Tree (MST)** mit **Kruskal’s und Prim’s Algorithmus**. Zusätzlich wird der MST sowohl in **2D als auch in 3D** visualisiert. 
 
 ---
 
-## 📖 Was ist ein Minimum Spanning Tree (MST)?
+##  Was ist ein Minimum Spanning Tree (MST)?
 Ein **Minimum Spanning Tree (MST)** ist ein Teilgraph eines gewichteten, zusammenhängenden und ungerichteten Graphen, der:
 - Alle Knoten des Graphen verbindet.
 - Die minimale Summe der Kantengewichte aufweist.
@@ -12,7 +12,7 @@ Ein **Minimum Spanning Tree (MST)** ist ein Teilgraph eines gewichteten, zusamme
 
 ---
 
-## 🔹 Kruskal’s Algorithmus (Greedy-Ansatz)
+##  Kruskal’s Algorithmus (Greedy-Ansatz)
 **Idee:**
 - Wähle die **leichteste Kante**, die keinen **Zyklus** erzeugt.
 - Füge sie dem MST hinzu.
@@ -22,7 +22,7 @@ Ein **Minimum Spanning Tree (MST)** ist ein Teilgraph eines gewichteten, zusamme
 
 🔹 **Laufzeit:** \( O(E \log E) \) (weil die Kanten zuerst sortiert werden)
 
-### ✨ Beispiel:
+###  Beispiel:
 ```plaintext
 Knoten:  {0, 1, 2, 3}
 Kanten mit Gewichten:
@@ -36,7 +36,7 @@ Ergebnis (MST): **(0-1), (1-2), (2-3)** mit Gesamtgewicht **6**
 
 ---
 
-## 🔹 Prim’s Algorithmus (Greedy-Ansatz)
+##  Prim’s Algorithmus (Greedy-Ansatz)
 **Idee:**
 - Beginne bei einem beliebigen Knoten.
 - Wähle die **leichteste angrenzende Kante**.
@@ -48,17 +48,17 @@ Ergebnis (MST): **(0-1), (1-2), (2-3)** mit Gesamtgewicht **6**
 
 ---
 
-## 🚀 Visualisierung in 2D & 3D
-### 🖼 2D-Visualisierung mit `networkx`
-📌 Zeigt den Originalgraphen & MST
+##  Visualisierung in 2D & 3D
+###  2D-Visualisierung mit `networkx`
+ Zeigt den Originalgraphen & MST
 ```python
 import networkx as nx
 import matplotlib.pyplot as plt
 
 ```
 
-### 🌍 3D-Visualisierung mit `mpl_toolkits.mplot3d`
-📌 Zufällige 3D-Positionen für Knoten, MST in **rot** hervorgehoben.
+###  3D-Visualisierung mit `mpl_toolkits.mplot3d`
+ Zufällige 3D-Positionen für Knoten, MST in **rot** hervorgehoben.
 ```python
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
@@ -66,8 +66,8 @@ from mpl_toolkits.mplot3d import Axes3D
 
 ---
 
-## 🛠 Installation
-### 1️⃣ Abhängigkeiten installieren:
+##  Installation
+### 1️ Abhängigkeiten installieren:
 ```bash
 pip install networkx matplotlib numpy
 ```
@@ -75,7 +75,7 @@ pip install networkx matplotlib numpy
 
 ---
 
-## ⚖️ Kruskal vs. Prim – Welcher ist besser?
+##  Kruskal vs. Prim – Welcher ist besser?
 | **Eigenschaft**  | **Kruskal** | **Prim** |
 |------------------|------------|---------|
 | **Ansatz**      | Greedy (Kanten-Auswahl) | Greedy (Knoten-Wachstum) |
@@ -84,7 +84,7 @@ pip install networkx matplotlib numpy
 
 ---
 
-## 📌 Anwendung
+##  Anwendung
 | **Einsatzgebiet** | **Algorithmus** |
 |------------------|----------------|
 | Straßennetzoptimierung | Kruskal |
